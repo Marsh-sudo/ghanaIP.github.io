@@ -6,6 +6,19 @@ if (date > 31) {
  if (month > 12){
      console.log('Invalid month');
  }
+function find_leapyear(){
+
+    var leapYear = document.getElementById("year").value;
+
+    if((leapYear % 4 == 0) && (leapYear % 100 !=0) || (leapYear % 400 == 0)) {
+        alert(leapYear + "True")
+    }else{
+        alert(leapYear + "False")
+    }
+
+}
+
+
  const maleNames = [Sunday["Kwasi"], Monday["Kwadwo"] ,Tuesday["Kwabena"] ,Wednesday["Kwaku"] ,Thursday["Yaw"], Friday["Kofi"] ,Saturday["Kwame"]];
  function let(male);{
  let male = maleNames[1,2,3,4,5,6,7];
@@ -28,3 +41,7 @@ if (date > 31) {
  }
  
 }
+
+const maleNames = [Sunday["Akosua"],Monday["Adwoa"],Tuesday["Abonaa"],Wednesday["Akua"],Thursday["Yaa"], Friday["Afua"],Saturday["Ama"]];
+
+
