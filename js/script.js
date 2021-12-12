@@ -23,6 +23,8 @@ if (date > 31) {
      console.log("You are Kofi")
  }else if(male===7){
      console.log("You are Kwame")
+ }else{
+     console.log("Enter valid Day")
  }
  
 }
