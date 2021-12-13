@@ -26,6 +26,7 @@ function find_leapyear(){
 
  const maleNames = [Sunday["Kwasi"], Monday["Kwadwo"] ,Tuesday["Kwabena"] ,Wednesday["Kwaku"] ,Thursday["Yaw"], Friday["Kofi"] ,Saturday["Kwame"]];
  function let(male);{
+     
     let male = maleNames[1,2,3,4,5,6,7];
    if (male === 1) {
     console.log("You are Kwasi.")
