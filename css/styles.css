@@ -1,3 +1,6 @@
 body{
     background-image: url(../assets/people.jpeg);
 }
+h2 {
+    text-decoration: underline;
+  }
