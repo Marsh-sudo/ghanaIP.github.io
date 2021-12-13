@@ -42,6 +42,25 @@ function find_leapyear(){
  
 }
 
-const maleNames = [Sunday["Akosua"],Monday["Adwoa"],Tuesday["Abonaa"],Wednesday["Akua"],Thursday["Yaa"], Friday["Afua"],Saturday["Ama"]];
-
+const femaleNames = [Sunday["Akosua"],Monday["Adwoa"],Tuesday["Abonaa"],Wednesday["Akua"],Thursday["Yaa"], Friday["Afua"],Saturday["Ama"]];
+function let(female);{
+    var womaconst = femaleNames(1,2,3,4,5,6,7);
+    if (womanconst == 1){
+        console.log;("You are Akosua")
+    } else if (womanconst == 2) {
+        console.log("You are Adwoa")
+    }else if (womanconst == 3){
+        console.log("You are Abonaa")
+    }else if (womanconst == 4){
+        console.log("You are Akua")
+    }else if (womanconst == 5){
+        console.log("You are Yaa")
+    }else if (womanconst === 6){
+        console.log("You are Afua")
+    }else if (womanconst == 7){
+        console.log("You are Ama")
+    }else{
+        console.log("Enter valid Date")
+    }
+}
 
