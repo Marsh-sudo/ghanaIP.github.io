@@ -6,6 +6,11 @@ if (date > 31) {
  if (month > 12){
      console.log('Invalid month');
  }
+
+
+
+
+ 
 function find_leapyear(){
 
     var leapYear = document.getElementById("year").value;
