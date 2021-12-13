@@ -1,10 +1,11 @@
 body{
     background-image: url(../assets/people.jpeg);
+    background-repeat: no-repeat;
 }
 h2 {
     text-decoration: underline;
   }
-  button :hover{
+#btn1:hover {
       background-color: orange;
   }
   h1 {
