@@ -1,10 +1,6 @@
-var date=function getDate(){
-    document.getElementById("birthday")
-
-
-
-  
-var date ="31"
+function getBirthday(){
+  document.getElementById
+  var date ="31"
 if (date > 31) {
     console.log("Invalid date");
 }
@@ -12,12 +8,15 @@ if (date > 31) {
  if (month > 12){
      console.log('Invalid month');
  }
-}
- function getBirthday(){
-      document.getElementById
+
+
  } 
 
 
+
+
+
+ 
 
  
 function find_leapyear(){
