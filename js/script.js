@@ -1,4 +1,10 @@
-var date = 31;
+var date=function getDate(){
+    document.getElementById("birthday")
+
+
+
+  
+var date ="31"
 if (date > 31) {
     console.log("Invalid date");
 }
@@ -6,7 +12,10 @@ if (date > 31) {
  if (month > 12){
      console.log('Invalid month');
  }
-
+}
+ function getBirthday(){
+      document.getElementById
+ } 
 
 
 
@@ -53,17 +62,17 @@ function let(female);{
     var womaconst = femaleNames(1,2,3,4,5,6,7);
     if (womanconst == 1){
         console.log;("You are Akosua")
-    } else if (womanconst == 2) {
+    } else if (womaconst == 2) {
         console.log("You are Adwoa")
-    }else if (womanconst == 3){
+    }else if (womaconst == 3){
         console.log("You are Abonaa")
-    }else if (womanconst == 4){
+    }else if (womaconst == 4){
         console.log("You are Akua")
-    }else if (womanconst == 5){
+    }else if (womaconst == 5){
         console.log("You are Yaa")
-    }else if (womanconst === 6){
+    }else if (womaconst === 6){
         console.log("You are Afua")
-    }else if (womanconst == 7){
+    }else if (womaconst == 7){
         console.log("You are Ama")
     }else{
         console.log("Enter valid Date")
