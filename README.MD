@@ -1,5 +1,6 @@
 <h1>PROJECT NAME</h1>
 Ghanian culture
+live link: https://marsh-sudo.github.io/ghanaIP.github.io/
 <h1>PROJECT DESCRIPTION</h1>
 describes how the people of Ghana are named according the days of week.
 
