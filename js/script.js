@@ -98,4 +98,4 @@ function getAkanNames(dw){
      }
 
  }
-}
+};
