@@ -13,6 +13,13 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 </head>
 <body>
+    <ul>
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+      
     <br>
 
     <div class="container" style="background-image: url(assets/people.jpeg)">
@@ -28,66 +35,26 @@
        THERE ARE MANY DIVERSE THINGS WE ARE LOOKING FORWORD FOR U TO EXPLORE BUT FIRST KINDLY FILL UP THE FORM BELOW INORDER FOR VERIFICATION.
    </p>
    <p>IN THIS PAGE YOU WILL BE ABLE TO TRANSLAT YOUR DAY OF BIRTH TO GHANA NAMES IRESPECTIVE OF YOUR GENDER.</p>
-  <div class="container" style="background-color: cadetblue;">
+
+  <div class="container" style="background-color: rgb(25, 26, 104);">
       <!--grid system-->
-      <form onsubmit="getAkaname()">
-          <h2>FILL IN THE DETAILS.</h2>
-        <div class="container">
-          <div class="row">
-            <div class="col">
-                <label>Names</label>
-                <input type="text" id="name">
-                <div class="radio"></div>
-               <label>
-                <input type="radio" id="gender" value="male">
-                MALE.
-               </label>
-            </div>
+      <form id="formakan">
+        <p id="empty"></p>
 
-            <div class="radio">
-                <label>
-                    <input type="radio" name="gender" value="female">
-                    FEMALE.
-                </label>
-            </div>
-
-
-
-            </div>
-
-          </div>
-
-        <br>
-         
-          <div class="row">
-              <div class="col-sm">
-                 <label>D.O.B.</label>
-                 <input type="date" id="birthday">
-              </div>
-          </div>
-
-              <br>
-
-
-              
-               <br>
-            
-               <div class="row">
-                   <div class="col">
-                       <input id="in1" type="button" onclick="msgPrint()" value="submit">
-
-                   </div>
-
-               </div>
-                   
-              </div> 
-            
-          </div>
-
-      </div>
-      
+         <input type="text" name="name" placeholder="enter date" id="date" class="form-control"  type="number">
+         <br>
+         <input type="text" name="name" id="month" placeholder="enter month" class="form-control" type="number" >
+         <br>
+         <input type="text" name="name" id="year" placeholder="enter year" class="form-control" type="number" >
+         <br>
+         <label >Select gender</label>
+         <select name="Gender" id="gender">
+             <option value="male">Male</option>
+             <option value="female">Female</option>
+         </select>
+         <br>
+         <button onsubmit="getValueAkan()" class="btn btn-primary" id="submit">submit</button>
      </form>
-     
   </div>
 </div>
 
