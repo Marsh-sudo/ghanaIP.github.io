@@ -1,62 +1,225 @@
-$(document).ready(function()
-$(form).submit(function(event){
-  var date = "31"
-  if (date > 31) {
-    console.log("Invalid date");
-}
-var month = 12;
-if (month > 12){
-    console.log('Invalid month');
-}
+
+function getValueAkan() {
+  var date = document.getElementById('date').value;
+  var month = document.getElementById('month').value;
+  var year = document.getElementById('year').value;
+  var gender = document.getElementById('gender').value;
+  validateValues(date,month,year,gender);
+
+
+
+
+function validateValues(date,month,year,gender){
+    //parseInt
+    var dateInt = parseInt(date);
+    if(dateInt > 31 || dateInt == 0){
+      alert("error in date entry");
+    } else if(dateInt == " "){
+      alert("date cannot be empty");
+ 
+    }
+    var monthInt = parseInt(month);
+    if(monthInt > 12 || monthInt == 0){
+      alert("error in month entry");
+    }
+     
+      getDayOfWeek(gender,century,year,month,day);
   
 
-     
-      var days = document.getElementById("gender").value;
-     var days = function(Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday)
-     var male = (Kwasi,Kwado,Kwabena,Kwaku,Yaw,Kofi,Kwame);
-     function msgPrint(male){
-      if (days == Sunday && male == Kwasi) {
-        alert("You are Kwasi.")
-       } else if (days== Monday && male == kwado) {
-         alert("You are kwado")
-       }else if(days == Tuesday && male == Kwabena){
-         alert("You are Kwabena")
-       }else if(days == Wednesday && male == Kwaku){
-         alert("You are Kwaku")
-       }else if(days == Thursday && male == Yaw){
-         alert("You are Yaw")
-       }else if(days == Friday && male == Kofi){
-         alert("You are Kofi")
-       }else if(days == Saturday && male == Kwame){
-         alert("You are Kwame")
-       }else{
-         alert("Enter valid Day")
-       }
-     }
-    
-    var days = document.getElementById("gender").value;
-    var days = function(Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday) ;
-    var femaleNames = (Akosua,Adowoa,Abenaa,Akua,Yaa,Afua,Yaa,Afua,Ama)
-      function msgPrint(femaleNames){
-        if (days == Sunday && femaleNames == Akosua){
-          alert("You are Akosua")
-      } else if (days == Monday && femaleNames == Adowoa) {
-          alert("You are Adwoa")
-      }else if (days == Tuesday && femaleNames == Abenaa){
-          alert("You are Abonaa")
-      }else if (days == Wednesday && femaleNames == Akua){
-          alert("You are Akua")
-      }else if (days == Thursday && femaleNames == Yaa){
-          alert("You are Yaa")
-      }else if (days == Friday && femaleNames == Afua){
-          alert("You are Afua")
-      }else if (days == Saturday && femaleNames == Ama){
-          alert("You are Ama")
-      }else{
-          alert("Enter valid Date")
-      }
-      }
-        
-    event.preventDefault()
+}
 
-    });
+function getDayOfWeek(gender,century,year,month,day);
+    //use formulae on Ip
+    var CC = parseInt(document.getElementById("century").value);
+    var MM = parseInt(document.getElementById("month").value);
+    var DD = parseInt(document.getElementById("day").value);
+    var YY = parseInt(document.getElementById("year").value);
+    
+    var century = year.slice(0,1);
+    var year = year.slice(2,3);
+    
+
+
+    // use fomula
+
+    var dayOfWeek = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) % 7;
+    var dw = Math.floor(dayOfWeek);
+   
+     getAkanNames(dw);
+
+  
+function getAkanNames(dw){
+     var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+     var newAnswer = dw.toString() + gender;
+     switch (newAnswer) {
+       case "1Male":
+         alert("Your name is Kwasi,you were born on" + days[1]);
+         break;
+         case "1female":
+           alert("You are Akosua,you were born on" + days[1]);
+           break;
+           case "2Male":
+             alert("You Akan Kwadwo,you were born on" + days[2]);
+             break;
+             case "2Female":
+               alert("Your Akan is Adwoa,you were born on" + days[2]);
+               break;
+               case "3Male":
+                 alert("You are is kwabena,you were born on" + days[3]);
+                 break;
+                 case "3Female":
+                   alert("You are is Akua,you were born on" + days[3]);
+                   break;
+                   case "4Male":
+                     alert("You are is Kwaku,you were born" + days[4]);
+                     break;
+                     case "4Female":
+                       alert("You are  Yaa,you were born on" + days[4]);
+                       break;
+                       case "5Male":
+                         alert("Your are Yaw,you were born on" + days[5]);
+                         break;
+                         case "5Female":
+                           alert("Your are Afua,you were born on" + days[5]);
+                           break;
+                           case "6Male":
+                             alert("Your are Kofi,you were born on" + days[6]);
+                             break;
+                             case "6Female":
+                               alert(" Your are Ama,you were born on" + days[6]);
+                               break;
+                               case "7Male":
+                                 alert("Your are Kwame,you were born on" + days[7]);
+                                 break;
+                                 case "7Female":
+                                   alert("Your are Amani,you were born on" + days[7]);
+                                 break;
+                                 default:
+                                   alert("Sorry no such Entry")
+     }
+
+}
+//   var date = document.getElementById('date').value;
+//   var month = document.getElementById('month').value;
+//   var year = document.getElementById('year').value;
+//   var gender = document.getElementById('gender').value;
+//   validateValues(date,month,year,gender);
+
+
+
+
+// function validateValues(date,month,year,gender){
+//     //parseInt
+//     var dateInt = parseInt(date);
+//     if(dateInt > 31 || dateInt == 0){
+//       alert("error in date entry");
+//     } else if(dateInt == " "){
+//       alert("date cannot be empty");
+ 
+//     }
+//     var monthInt = parseInt(month);
+//     if(monthInt > 12 || monthInt == 0){
+//       alert("error in month entry");
+//     }
+     
+//       getDayOfWeek(gender,century,year,month,day);
+  
+
+// }
+
+
+//     //use formulae on Ip
+//     var CC = parseInt(document.getElementById("century").value);
+//     var MM = parseInt(document.getElementById("month").value);
+//     var DD = parseInt(document.getElementById("day").value);
+//     var YY = parseInt(document.getElementById("year").value);
+    
+//     var century = year.slice(0,2);
+//     console.log(century)
+//     var year = year.slice(2,5);
+//     console.log(bornyear)
+
+
+//     // use fomula
+
+//     var dayOfWeek = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) % 7;
+//     var dw = Math.floor(dayOfWeek);
+   
+//      getAkanNames(dw,gender);
+
+  
+// function getAkanNames(dw,gender){
+//      var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+//      var maleNames = ['Kwadu','Kwadwao','Kwabena','Kwaku','Yaw','Kofi','Kwame'];
+//      var femaleNames = ['Akosua','Adwoa','Akua','Yaa','Afua','Ama','Amani'];
+//      var newAnswer = dw.toString() + gender;
+//      switch (newAnswer) {
+//        case "1Male":
+//          alert("Your name is Kwasi,you were born on" + days[1]);
+//          break;
+//          case "1female":
+//            alert("You are Akosua,you were born on" + days[1]);
+//            break;
+//            case "2Male":
+//              alert("You Akan Kwadwo,you were born on" + days[2]);
+//              break;
+//              case "2Female":
+//                alert("Your Akan is Adwoa,you were born on" + days[2]);
+//                break;
+//                case "3Male":
+//                  alert("You are is kwabena,you were born on" + days[3]);
+//                  break;
+//                  case "3Female":
+//                    alert("You are is Akua,you were born on" + days[3]);
+//                    break;
+//                    case "4Male":
+//                      alert("You are is Kwaku,you were born" + days[4]);
+//                      break;
+//                      case "4Female":
+//                        alert("You are  Yaa,you were born on" + days[4]);
+//                        break;
+//                        case "5Male":
+//                          alert("Your are Yaw,you were born on" + days[5]);
+//                          break;
+//                          case "5Female":
+//                            alert("Your are Afua,you were born on" + days[5]);
+//                            break;
+//                            case "6Male":
+//                              alert("Your are Kofi,you were born on" + days[6]);
+//                              break;
+//                              case "6Female":
+//                                alert(" Your are Ama,you were born on" + days[6]);
+//                                break;
+//                                case "7Male":
+//                                  alert("Your are Kwame,you were born on" + days[7]);
+//                                  break;
+//                                  case "7Female":
+//                                    alert("Your are Amani,you were born on" + days[7]);
+//                                  break;
+//                                  default:
+//                                    alert("Sorry no such Entry")
+//      }
+
+//   }
+
+
+//      //control flows //switch
+//     //  if(dayOfWeek == 1 && gender == "male" || gender == "female"){
+//     //    alert("You were born on a " + days[0] + "Your akan name is " + maleNames[0]);
+//     //    alert("Your were born on a " + days[0] + "Your akan name is" + femaleNames[0]);
+//     //  } else if(dayOfWeek == 1 && gender == "female") {
+//     //   alert("You were born on a " + days[0] + "Your akan name is " + "Ann");
+
+//     //  }else if(dayOfWeek == 2 && gender == "male" || gender == "female"){
+//     //    alert("You were born on a " + days[1] + "Your akan name is " + maleNames[1]);
+//     //  }else if(dayOfWeek == 2 && gender == "male" || gender == "female"){
+//     //    alert("You were born on a " + days[2] + "Your akan name is " + maleNames[2]);
+//     //  }else if(dayOfWeek == 3 && gender == "male") {
+//     //    alert("You were born on a " + days[3] + "Your akan name is" + maleNames[3]);
+//     //  }else if(dayOfWeek == 4 && gender == "male"){
+//     //    alert("You were born on a " + days[4] + "Your akan name is" + maleNames[4]);
+//     //  }
+// }
+
+     
+     
